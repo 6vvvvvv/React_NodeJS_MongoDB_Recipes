@@ -1,10 +1,38 @@
 # React_Redux_Node_Recipes
  
- ## 1:Main
-![image](https://github.com/6vvvvvv/ReactNative_Covid19/blob/master/img/1.png)
+## Prerequisite: Make sure you change the counterpart for accessing your personal MongoDB address.
 
-## 2:Mapping
-![image](https://github.com/6vvvvvv/ReactNative_Covid19/blob/master/img/2.png)
+## 1:Carousel and NaviBar before Login
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/1-1.jpg)
 
-## 3:Map
-![image](https://github.com/6vvvvvv/ReactNative_Covid19/blob/master/img/3.png)
+## 2:Searchbar and Showcase related to datas in MongoDB
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/1-2.jpg)
+
+## 3:Search for sepecific content by typing parts of the caracters of title and it's result
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/2.jpg)
+
+## 4:Sign Up Page
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/3.jpg)
+
+## 5:Main after loggedin
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/4.jpg)
+
+## 6:Main after loggedin (userchanged)
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/5.jpg)
+
+## 7:Editing Page (authenticated)
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/6.jpg)
+
+## 8:Log Out (userchanged)
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/7.jpg)
+
+## 9:MongDB Overview
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/8.jpg)
+
+## 10:Users Collection
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/9.jpg)
+
+## 9:Recipes Collection
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/10.jpg)
+
+
