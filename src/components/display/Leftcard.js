@@ -16,7 +16,7 @@ const Leftcard = (props) => {
   useEffect(() => {
     props.fetchapi();
   }, []);
- 
+
   useEffect(() => {
     const result = props.recipes.filter((item) => item.title.includes(text));
     setDisplay(result);
@@ -48,6 +48,7 @@ const Leftcard = (props) => {
                 </div>
 
                 <div className="discription">
+                  <h5>{searchitem.title}</h5>
                   <p>{searchitem.description}</p>
                   <p>Author: {searchitem.author}</p>
                   <span>Click for detail...</span>

@@ -141,7 +141,10 @@ router.post(
   }
 );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 221e4d0... img upload
 
 router.get("/me", auth, async (req, res) => {
   try {

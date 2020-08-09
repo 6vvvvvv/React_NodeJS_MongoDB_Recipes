@@ -21,6 +21,7 @@ const Public = (props) => {
                 </div>
 
                 <div className="discription">
+                  <h5>{item.title}</h5>
                   <p>{item.description}</p>
                   <p>Author: {item.author}</p>
                   <span>Click for detail...</span>
