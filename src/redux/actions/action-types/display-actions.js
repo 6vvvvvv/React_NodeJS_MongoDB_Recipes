@@ -1,0 +1,3 @@
+export const FETCHPENDING = "FETCHPENDING";
+export const FETCHSUCCESS = "FETCHSUCCESS";
+export const FETCHERROR = "FETCHERROR";

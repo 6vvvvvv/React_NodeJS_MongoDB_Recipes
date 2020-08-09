@@ -1,0 +1,5 @@
+.showcase{
+    display: flex;
+    justify-content: center;
+    height: 37rem;
+}
