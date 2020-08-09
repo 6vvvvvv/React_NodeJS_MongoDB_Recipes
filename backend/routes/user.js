@@ -8,11 +8,6 @@ const auth = require("../middleware/auth");
 const User = require("../model/User");
 const Recipe = require("../model/Recipe");
 
-/**
- * @method - POST
- * @param - /signup
- * @description - User SignUp
- */
 
 router.post(
   "/signup",
@@ -146,11 +141,7 @@ router.post(
   }
 );
 
-/**
- * @method - POST
- * @description - Get LoggedIn User
- * @param - /user/me
- */
+
 
 router.get("/me", auth, async (req, res) => {
   try {
