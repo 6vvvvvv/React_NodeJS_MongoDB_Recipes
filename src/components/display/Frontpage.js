@@ -7,7 +7,9 @@ const Frontpage = (props) => {
   return (
     <div>
       <Showcase />
-      <Recipe />
+      <div className="container">
+        <Recipe />
+      </div>
     </div>
   );
 };

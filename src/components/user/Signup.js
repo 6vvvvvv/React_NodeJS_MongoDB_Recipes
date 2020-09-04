@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import axios from "axios";
+import "./Signup.css"
 
 const Signup = (props) => {
   const [username, setUsername] = useState("");
@@ -35,6 +36,7 @@ const Signup = (props) => {
   };
 
   return (
+    <div className="container">
     <div className="card signup">
       <div className="card-content">
         <div className="row">
@@ -79,17 +81,17 @@ const Signup = (props) => {
                 <label htmlFor="password">Password</label>
               </div>
             </div>
-            <div className="row">
+            <div className="n-login">
               <p>
                 Already registered?{" "}
                 <span>
-                  <Link to="/login" className="redirect">
+                  <Link to="/user/login" className="redirect">
                     Sign In
                   </Link>
                 </span>
               </p>
             </div>
-            <div className="row">
+            <div className="sigin-btn">
               <button
                 className="btn waves-effect waves-light pink"
                 name="action"
@@ -102,6 +104,7 @@ const Signup = (props) => {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

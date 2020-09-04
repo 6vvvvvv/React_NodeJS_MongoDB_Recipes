@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { withRouter, Link } from "react-router-dom";
+import "./Myspace.css"
 
 const Myspace = (props) => {
   const [title, setTitle] = useState("");
@@ -79,7 +80,7 @@ const Myspace = (props) => {
   };
 
   return (
-    <div>
+    <div className="container myspace">
       <div className="row">
         {" "}
         <label htmlFor="title">Title</label>
@@ -127,14 +128,14 @@ const Myspace = (props) => {
       </div>
       <div className="row">
         <button
-          className="btn waves-effect waves-light pink"
+          className="btn waves-effect waves-light pink sub-btn"
           name="action"
           onClick={submit}
         >
           Submit
           <i className="material-icons right"></i>
         </button>
-        <div className="row">
+        <div className="sub-btn-text">
           <Link to="/">return to frontpage</Link>
         </div>
       </div>

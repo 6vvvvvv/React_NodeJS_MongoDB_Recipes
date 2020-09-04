@@ -16,6 +16,15 @@ const Showcase = () => {
         <div>
           <img src={require("../../static/img/8100470.jpg")} alt="img5" />
         </div>
+        <div>
+          <img src="https://s8.gifyu.com/images/Frozen-Zabaglione.jpg" alt="img6" />
+        </div>
+        <div>
+          <img src="https://s8.gifyu.com/images/Garlic-Sesame-Chicken-Thighs.jpg" alt="img7" />
+        </div>
+        <div>
+          <img src="https://s8.gifyu.com/images/Gkai-Kamin.jpg" alt="img8" />
+        </div>
       </Carousel>
     </div>
   );

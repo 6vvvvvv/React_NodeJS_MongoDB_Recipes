@@ -1,19 +1,19 @@
 import {
-  FETCHPENDING,
-  FETCHSUCCESS,
-  FETCHERROR,
+	FETCHPENDING,
+	FETCHSUCCESS,
+	FETCHERROR,
 } from "./action-types/display-actions";
 
 export const fetchpending = () => ({
-  type: FETCHPENDING,
+	type: FETCHPENDING,
 });
 
 export const fetchsuccess = (payload) => ({
-  type: FETCHSUCCESS,
-  payload,
+	type: FETCHSUCCESS,
+	payload,
 });
 
 export const fetcherror = (error) => ({
-  type: FETCHERROR,
-  error,
+	type: FETCHERROR,
+	error,
 });

@@ -18,7 +18,10 @@ const Leftcard = (props) => {
   }, []);
 
   useEffect(() => {
-    const result = props.recipes.filter((item) => item.title.includes(text));
+    const result = props.recipes.filter((item) => {
+      var titleLowerCase = item.title.toLowerCase();
+      return titleLowerCase.includes(text.toLocaleLowerCase());
+    });
     setDisplay(result);
   }, [text, props.recipes]);
 
@@ -29,10 +32,6 @@ const Leftcard = (props) => {
   const onChange = (e) => {
     setText(e.target.value);
   };
-
-  if (props.recipes.length > 0) {
-    console.log("leftcard", props.recipes);
-  }
 
   const searchresult = display.map((searchitem) => {
     return (

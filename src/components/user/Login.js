@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import axios from "axios";
 import { loginUser } from "../../redux/actions/recipeActionsCreactor";
 import { connect } from "react-redux";
+import "./Login.css"
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -47,7 +48,7 @@ const Login = (props) => {
   }, [props.currentState]);
 
   return (
-    <div>
+    <div className="container">
       <div className="card login">
         <div className="card-content">
           <div className="row">
@@ -80,7 +81,7 @@ const Login = (props) => {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="n-regis">
                 <p>
                   Not registered?{" "}
                   <span>
@@ -90,7 +91,7 @@ const Login = (props) => {
                   </span>
                 </p>
               </div>
-              <div className="row">
+              <div className="sigin-btn">
                 <button
                   className="btn waves-effect waves-light pink"
                   name="action"

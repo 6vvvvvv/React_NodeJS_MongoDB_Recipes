@@ -8,7 +8,6 @@ const auth = require("../middleware/auth");
 const User = require("../model/User");
 const Recipe = require("../model/Recipe");
 
-
 router.post(
   "/signup",
   [
@@ -26,7 +25,9 @@ router.post(
       });
     }
 
-    const { username, email, password } = req.body;
+    const { username, password } = req.body;
+    var { email } = req.body;
+    email=email.toLowerCase()
     try {
       let user = await User.findOne({
         email,
@@ -94,7 +95,11 @@ router.post(
       });
     }
 
-    const { email, password } = req.body;
+    const {  password } = req.body;
+    var { email } = req.body;
+
+    email=email.toLowerCase()
+    console.log("EMAIL",email)
     try {
       let user = await User.findOne({
         email,
@@ -140,11 +145,6 @@ router.post(
     }
   }
 );
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 221e4d0... img upload
 
 router.get("/me", auth, async (req, res) => {
   try {
