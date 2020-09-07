@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { withRouter, Link } from "react-router-dom";
-import "../../static/css/Myspace.css"
+import "./Myspace.css"
 
 const Myspace = (props) => {
   const [title, setTitle] = useState("");

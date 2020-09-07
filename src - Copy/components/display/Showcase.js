@@ -1,4 +1,5 @@
 import React from "react";
+import "../../static/css/showcase.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import {
   Carousel

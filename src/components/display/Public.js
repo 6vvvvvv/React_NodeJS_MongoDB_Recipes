@@ -1,36 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import {
   getPending,
   getRecipes,
   getError,
 } from "../../redux/reducers/displayReducer";
+import "../../static/css/recipe.css";
+import { Link } from "react-router-dom";
 
 const Public = (props) => {
   return (
     <div>
-      <div className="recipes">
-        {props.recipes.map((item) => (
-          <div key={item._id}>
-            <div className="box-left">
-              <div className="row">
-                <div className="col s6">
-                  <div className="img-container">
-                    <img src={item.imgpath} alt={item.title}></img>
-                  </div>
-                </div>
+      {props.recipes.map((item, index) => (
+        <div className="recipes" key={index}>
+          <div className="recipe-img">
+            <Link to={{ pathname: "/user/detail", state: props.recipes._id }}>
+              <img
+                src={item.imgpath}
+                alt={item.title}
+                className="recipe-item"
+              ></img>
+            </Link>
+          </div>
 
-                <div className="discription">
-                  <h5>{item.title}</h5>
-                  <p>{item.description}</p>
-                  <p>Author: {item.author}</p>
-                  <span>Click for detail...</span>
-                </div>
-              </div>
+          <div className="recipe-discription">
+            <div className="discription-container">
+              <h5>{item.title}</h5>
+              <p>{item.description}</p>
+              <p>Author: {item.author}</p>
+              <span>Click for detail...</span>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

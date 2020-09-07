@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../static/css/recipe.css";
 import { connect } from "react-redux";
 import {
@@ -8,10 +8,12 @@ import {
 } from "../../redux/reducers/displayReducer";
 import fetchApi from "../../redux/actions/fetchApi";
 import Public from "./Public";
+import { Link } from "react-router-dom";
 
 const Leftcard = (props) => {
   const [text, setText] = useState("");
   const [display, setDisplay] = useState([]);
+  const textInput = useRef(null);
 
   useEffect(() => {
     props.fetchapi();
@@ -25,35 +27,36 @@ const Leftcard = (props) => {
     setDisplay(result);
   }, [text, props.recipes]);
 
-  useEffect(() => {
-    console.log("change in display", display);
-  }, [display]);
-
   const onChange = (e) => {
     setText(e.target.value);
   };
 
-  const searchresult = display.map((searchitem) => {
-    return (
-      <div>
-        <div className="searchresult">
-          <div key={searchitem._id}>
-            <div className="box-left">
-              <div className="row">
-                <div className="col s6">
-                  <div className="img-container">
-                    <img src={searchitem.imgpath} alt={searchitem.title}></img>
-                  </div>
-                </div>
+  const getfocus = () => {
+    textInput.current.focus();
+  };
 
-                <div className="discription">
-                  <h5>{searchitem.title}</h5>
-                  <p>{searchitem.description}</p>
-                  <p>Author: {searchitem.author}</p>
-                  <span>Click for detail...</span>
-                </div>
-              </div>
-            </div>
+  useEffect(() => {
+    console.log("searchobject", display);
+  }, [display]);
+
+  const searchresult = display.map((searchitem, index) => {
+    return (
+      <div className="search-result" key={index}>
+        <div className="recipe-img">
+          <Link to="/user/detail">
+            <img
+              src={searchitem.imgpath}
+              alt={searchitem.title}
+              className="recipe-item"
+            ></img>
+          </Link>
+        </div>
+
+        <div className="recipe-discription">
+          <div className="discription-container">
+            <h5>{searchitem.title}</h5>
+            <p>{searchitem.description}</p>
+            <p>Author: {searchitem.author}</p>
           </div>
         </div>
       </div>
@@ -62,17 +65,21 @@ const Leftcard = (props) => {
 
   return (
     <div>
-      <div className="searchbar">
+      <div className="search-bar">
+        <i className="fas fa-search search-icon" onClick={getfocus}></i>
         <input
           type="text"
           id="input"
-          className="input"
-          placeholder="Search item here..."
+          className="searchinput"
+          placeholder="Search your recipe here..."
           onChange={onChange}
           value={text}
+          ref={textInput}
         />
       </div>
-      <div>{display.length > 0 ? searchresult : <Public />}</div>
+      <div className="show-recipes">
+        {display.length > 0 ? (searchresult ): <Public />}
+      </div>
     </div>
   );
 };

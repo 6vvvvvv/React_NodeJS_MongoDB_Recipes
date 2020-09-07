@@ -1,14 +1,17 @@
 import React from "react";
-import Recipe from "./Recipe";
-// import Searchbar from "./Searchbar";
+import Leftcard from "./Leftcard";
 import Showcase from "./Showcase";
+import "../../static/css/frontpage.css";
 
 const Frontpage = (props) => {
   return (
     <div>
-      <Showcase />
-      <div className="container">
-        <Recipe />
+      <div className="showcase-container">
+        <Showcase />
+      </div>
+
+      <div className="recipe-container">
+        <Leftcard />
       </div>
     </div>
   );

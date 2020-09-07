@@ -4,12 +4,11 @@ import "../../static/css/recipe.css";
 // import Rightcard from "./Rightcard";
 
 const Recipe = () => {
-  return (
-    <div >
+	return (
+		<div >
       <Leftcard />
-      {/* <Rightcard /> */}
     </div>
-  );
+	);
 };
 
 export default Recipe;

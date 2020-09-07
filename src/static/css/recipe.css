@@ -1,18 +1,48 @@
-  
-.box-left{
-    box-shadow: 0px 0px 10px 1px #888888;
+.show-recipes {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 40px;
 }
 
-.discription{
-    padding:10px 30px 30px 100px; 
+.search-bar {
+  margin: 0px 0px 60px 0px;
+  padding: 0px 600px 0px 600px;
 }
 
-.img-container{
-    padding-left: 100px;
-    padding-top: 6px;
-    padding-bottom: auto;
+.search-icon {
+  position: absolute;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
-.box-right{
-    box-shadow: 0px 8px 30px 5px #888888;
+.searchinput {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-result,
+.recipes {
+  width: 350px;
+  margin-bottom: 70px;
+  margin-left: 10px;
+  box-shadow: 8px 10px 8px 0px #888888;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.recipe-img {
+  padding: 20px 25px 10px 25px;
+}
+
+img.recipe-item {
+  width: 300px;
+  height: 300px;
+}
+
+.recipe-discription {
+}
+
+.discription-container {
+  padding: 0px 25px 20px 25px;
 }

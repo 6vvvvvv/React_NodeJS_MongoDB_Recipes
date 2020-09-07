@@ -1,6 +1,11 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import "../../static/css/nav.css";
-import { Link, withRouter } from "react-router-dom";
+import {
+  Link,
+  withRouter
+} from "react-router-dom";
 import axios from "axios";
 
 class Navi extends Component {

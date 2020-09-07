@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import axios from "axios";
 import { loginUser } from "../../redux/actions/recipeActionsCreactor";
 import { connect } from "react-redux";
-import "../../static/css/Login.css"
+import "./Login.css"
 
 const Login = (props) => {
   const [email, setEmail] = useState("");

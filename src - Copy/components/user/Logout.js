@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/recipeActionsCreactor";
 import { withRouter, Link } from "react-router-dom";
 import avatar from "../../static/img/avatar.png";
-import "../../static/css/Logout.css"
+import "./Logout.css";
 
 const Logout = (props) => {
   const logout = () => {
