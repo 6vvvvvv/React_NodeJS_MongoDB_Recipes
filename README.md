@@ -26,10 +26,10 @@
 ## 8:Log Out (userchanged)
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/7.jpg)
 
-## 9:Detail Page1
+## 9:Detail Page1(with carousel)
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/11.jpg)
 
-## 9-1:Detail Page2
+## 9-1:Detail Page2(with carousel)
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/12.jpg)
 
 ## 10:MongDB Overview
