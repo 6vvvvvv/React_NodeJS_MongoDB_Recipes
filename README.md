@@ -14,7 +14,7 @@
 ## 4:Sign Up Page
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/3.jpg)
 
-## 5:Main after loggedin
+## 5:Main before loggedin
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/4.jpg)
 
 ## 6:Main after loggedin (userchanged)
