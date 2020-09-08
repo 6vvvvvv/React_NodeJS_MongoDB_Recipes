@@ -26,13 +26,19 @@
 ## 8:Log Out (userchanged)
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/7.jpg)
 
-## 9:MongDB Overview
+## 9:Detail Page1
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/11.jpg)
+
+## 9-1:Detail Page2
+![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/12.jpg)
+
+## 10:MongDB Overview
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/8.jpg)
 
-## 10:Users Collection
+## 11:Users Collection
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/9.jpg)
 
-## 9:Recipes Collection
+## 12:Recipes Collection
 ![image](https://github.com/6vvvvvv/React_Redux_Node_Recipes/blob/master/img/10.jpg)
 
 
