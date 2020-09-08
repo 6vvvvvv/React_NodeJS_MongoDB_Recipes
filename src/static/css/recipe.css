@@ -19,12 +19,13 @@
 
 .searchinput {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .search-result,
 .recipes {
   width: 350px;
+  height: 530px;
   margin-bottom: 70px;
   margin-left: 10px;
   box-shadow: 8px 10px 8px 0px #888888;
@@ -41,6 +42,13 @@ img.recipe-item {
 }
 
 .recipe-discription {
+}
+
+.short-intro {
+  display: block;
+  overflow: hidden;
+  max-height: 30px;
+  word-wrap: break-word;
 }
 
 .discription-container {

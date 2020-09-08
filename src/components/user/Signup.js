@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import axios from "axios";
-import "../../static/css/Signup.css"
+import "../../static/css/Signup.css";
 
 const Signup = (props) => {
   const [username, setUsername] = useState("");
@@ -37,8 +37,7 @@ const Signup = (props) => {
 
   return (
     <div className="container">
-    <div className="card signup">
-      <div className="card-content">
+      <div className="signup-card-content">
         <div className="row">
           <form className="col s12">
             <div className="row">
@@ -91,7 +90,7 @@ const Signup = (props) => {
                 </span>
               </p>
             </div>
-            <div className="sigin-btn">
+            <div className="signup-btn">
               <button
                 className="btn waves-effect waves-light pink"
                 name="action"
@@ -104,7 +103,6 @@ const Signup = (props) => {
           </form>
         </div>
       </div>
-    </div>
     </div>
   );
 };

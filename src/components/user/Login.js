@@ -49,7 +49,6 @@ const Login = (props) => {
 
   return (
     <div className="container">
-      <div className="card login">
         <div className="card-content">
           <div className="row">
             <form className="col s12">
@@ -104,7 +103,7 @@ const Login = (props) => {
             </form>
           </div>
         </div>
-      </div>
+     
     </div>
   );
 };

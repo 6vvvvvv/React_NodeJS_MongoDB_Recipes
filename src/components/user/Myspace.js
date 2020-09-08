@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { withRouter, Link } from "react-router-dom";
-import "../../static/css/Myspace.css"
+import "../../static/css/Myspace.css";
+import ImageUploader from "react-images-upload";
 
 const Myspace = (props) => {
   const [title, setTitle] = useState("");
@@ -9,6 +10,7 @@ const Myspace = (props) => {
   const [imgpath, setImgpath] = useState("");
   const [author, setAuthor] = useState("");
   const [saveSuccess, setsaveSuccess] = useState(false);
+  const [imgGroup, setImgGroup] = useState([]);
 
   useEffect(() => {
     if (!localStorage.length) {
@@ -79,69 +81,90 @@ const Myspace = (props) => {
       .catch((err) => console.log(err));
   };
 
+  const onDrop = (pic) => {
+    setImgGroup(imgGroup.concat(pic));
+  };
+
   return (
-    <div className="container myspace">
-      <div className="row">
-        {" "}
-        <label htmlFor="title">Title</label>
-        <input
-          id="title"
-          type="text"
-          className="title"
-          name="title"
-          value={title}
-          onChange={titleChange}
-        />
-      </div>
-      <div className="row">
-        <label htmlFor="description">description</label>
-        <input
-          id="description"
-          type="text"
-          className="description"
-          name="description"
-          value={description}
-          onChange={descriptionChange}
-        />
-      </div>
-      <div className="row">
-        <label htmlFor="imgpath">Imgpath</label>
-        <input
-          id="imgpath"
-          type="text"
-          className="imgpath"
-          name="imgpath"
-          value={imgpath}
-          onChange={ImgpathChange}
-        />
-      </div>
-      <div className="row">
-        <label htmlFor="author">Author</label>
-        <input
-          id="author"
-          type="text"
-          className="author"
-          name="author"
-          value={author}
-          onChange={authorChange}
-        />
-      </div>
-      <div className="row">
-        <button
-          className="btn waves-effect waves-light pink sub-btn"
-          name="action"
-          onClick={submit}
-        >
-          Submit
-          <i className="material-icons right"></i>
-        </button>
-        <div className="sub-btn-text">
-          <Link to="/">return to frontpage</Link>
+    <div className="container ">
+      <div className="my-space">
+        <div className="row">
+          {" "}
+          <label htmlFor="title">Title</label>
+          <input
+            id="title"
+            type="text"
+            className="title"
+            name="title"
+            value={title}
+            onChange={titleChange}
+          />
         </div>
+        <div className="row">
+          <label htmlFor="description">Description</label>
+          <input
+            id="description"
+            type="text"
+            className="description"
+            name="description"
+            value={description}
+            onChange={descriptionChange}
+          />
+        </div>
+        <div className="row">
+          <label htmlFor="imgpath">Imgpath</label>
+          <input
+            id="imgpath"
+            type="text"
+            className="imgpath"
+            name="imgpath"
+            value={imgpath}
+            onChange={ImgpathChange}
+          />
+        </div>
+        <div className="row">
+          <label htmlFor="author">Author</label>
+          <input
+            id="author"
+            type="text"
+            className="author"
+            name="author"
+            value={author}
+            onChange={authorChange}
+          />
+        </div>
+        <div className="row">
+          <label htmlFor="updaload">Upload</label>
+          <ImageUploader
+            withIcon={true}
+            buttonText="Choose images"
+            onChange={onDrop}
+            imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+            maxFileSize={5242880}
+            withPreview={true}
+          />
+        </div>
+
+        <div className="row sub-btn">
+          <button
+            className="btn waves-effect waves-light pink "
+            name="action"
+            onClick={submit}
+          >
+            Submit
+            <i className="material-icons right"></i>
+          </button>
+          <span className="sub-btn-text">
+            {" "}
+            <Link to="/">
+              <i class="fas fa-undo-alt"></i>
+            </Link>
+          </span>
+        </div>
+        {saveSuccess && (
+          <div className="row">you have successfully save the data</div>
+        )}
       </div>
-      {saveSuccess && (
-        <div className="row">you have successfully save the data</div>
-      )}
     </div>
   );
 };

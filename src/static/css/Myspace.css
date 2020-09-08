@@ -1,17 +1,24 @@
-.myspace{
-    margin-top:150px;
+.my-space{
+    margin-top:100px;
+    margin-left: 300px;
     width:50%;
-    height: 650px;
+    height: 750px;
     padding: 50px;
     box-shadow: 0 0 7px 1px;
 }
 
-.sub-btn-text{
-    margin-left: 360px;
-    margin-top: 30px;
-}
+
 
 .sub-btn{
-    margin-left:380px;
-    margin-top: 30px;
+    padding-left:220px;
+    margin-top: 20px;
 }
+
+.sub-btn-text{
+    position: absolute;
+    right:690px;
+    top:850px;
+    font-size: 30px;
+   
+}
+

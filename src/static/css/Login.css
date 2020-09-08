@@ -1,14 +1,16 @@
-.login{
+.card-content{
     margin-left: 450px;
     margin-top:100px;
-    width: 350px;
+    padding: 45px 30px 30px 30px;
+    width: 450px;
+    height: 400px;
+    box-shadow: 1px 1px 5px 5px rgb(168, 162, 162);
 }
 
 .n-regis{
-    margin-left: 10px;
+    text-align: center;
 }
 
 .sigin-btn{
-    margin-left: 90px;
-    margin-top:20px
+    padding-left:130px
 }

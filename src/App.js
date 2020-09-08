@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/user/login" component={Login} />
         <Route path="/user/logout" component={Logout} />
         <Route path="/user/me" component={Myspace} />
-        <Route path="/user/detail" component={Detail} />
+        <Route path="/user/detail/:id" component={Detail} />
       </Switch>
     </Router>
   );

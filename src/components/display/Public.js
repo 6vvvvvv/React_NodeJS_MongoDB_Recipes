@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import {
   getPending,
@@ -14,7 +14,7 @@ const Public = (props) => {
       {props.recipes.map((item, index) => (
         <div className="recipes" key={index}>
           <div className="recipe-img">
-            <Link to={{ pathname: "/user/detail", state: props.recipes._id }}>
+            <Link to={`/user/detail/${item._id}`}>
               <img
                 src={item.imgpath}
                 alt={item.title}

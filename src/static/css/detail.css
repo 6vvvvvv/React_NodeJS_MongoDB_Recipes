@@ -1,0 +1,78 @@
+.desciption {
+  height: 420px;
+}
+
+.detail-img {
+  float: left;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.detail-description {
+  margin-left: 500px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.long-intro {
+  display: block;
+  margin-top: 10px;
+}
+
+.carousel-step {
+  position: absolute !important;
+  margin-left: 500px;
+  top: 315px;
+}
+
+ul.list-social-icons li {
+  display: inline;
+}
+
+li.list-inline-item > a > span {
+  font-size: 45px;
+  margin-left: 5px;
+  color: #ff80ab;
+}
+
+.share {
+  height: 50px;
+  margin-bottom: 60px;
+}
+
+.discuss {
+  height: 650px;
+}
+
+.comment-section {
+  position: relative;
+  height: 390px;
+}
+
+.textarea {
+  position: relative;
+  height: 200px;
+  margin-top: 10px;
+}
+
+div.textarea textarea {
+  resize: none;
+  height: 150px;
+  width: 600px;
+}
+
+.page-footer {
+  margin-top: 40px;
+  left: 0;
+  bottom: 0;
+}
+
+.comment-section  ul li{
+    margin-bottom: 15px;
+}
+
+/* .carousel-item >img{
+  width: 200px;
+  height: 200px;
+} */

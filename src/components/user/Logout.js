@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../redux/actions/recipeActionsCreactor";
 import { withRouter, Link } from "react-router-dom";
 import avatar from "../../static/img/avatar.png";
-import "../../static/css/Logout.css"
+import "../../static/css/Logout.css";
 
 const Logout = (props) => {
   const logout = () => {
@@ -21,41 +21,35 @@ const Logout = (props) => {
   }, [props.currentState, props.history]);
 
   return (
-    <div className="row">
-      {" "}
-      <div className="col s4"></div>{" "}
-      <div className="col s3">
-        <div className="card logout">
-          <div className="card-content">
-            <div className="row">
-              <div className="imgcontainer col s12">
-                <img src={avatar} alt="Avatar" className="avatar" />
-              </div>
-              <form className="col s12">
-                <div className="row">
-                  <p className="return-home">
-                    Still want to buy?{" "}
-                    <span>
-                      <Link to="/" className="redirect">
-                        Return to HomePage
-                      </Link>
-                    </span>
-                  </p>
-                </div>
-
-                <div className="row">
-                  <button
-                    className="btn waves-effect waves-light pink logout-btn "
-                    name="action"
-                    onClick={logout}
-                  >
-                    Sign Out and Leave
-                    <i className="material-icons right"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
+    <div className="container">
+      <div className="logout-card-content">
+        <div className="row">
+          <div className="imgcontainer col s12">
+            <img src={avatar} alt="Avatar" className="avatar" />
           </div>
+          <form className="col s12">
+            <div className="row">
+              <p className="return-home">
+                Still want to buy?{" "}
+                <span>
+                  <Link to="/" className="redirect">
+                    Return to HomePage
+                  </Link>
+                </span>
+              </p>
+            </div>
+
+            <div className="row">
+              <button
+                className="btn waves-effect waves-light pink logout-btn "
+                name="action"
+                onClick={logout}
+              >
+                Sign Out and Leave
+                <i className="material-icons right"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

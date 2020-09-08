@@ -36,14 +36,14 @@ const Leftcard = (props) => {
   };
 
   useEffect(() => {
-    console.log("searchobject", display);
+    console.log("display", display);
   }, [display]);
 
   const searchresult = display.map((searchitem, index) => {
     return (
       <div className="search-result" key={index}>
         <div className="recipe-img">
-          <Link to="/user/detail">
+          <Link to={`/user/detail/${searchitem._id}`}>
             <img
               src={searchitem.imgpath}
               alt={searchitem.title}
@@ -55,7 +55,7 @@ const Leftcard = (props) => {
         <div className="recipe-discription">
           <div className="discription-container">
             <h5>{searchitem.title}</h5>
-            <p>{searchitem.description}</p>
+            <p className="short-intro">{searchitem.description}</p>
             <p>Author: {searchitem.author}</p>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Leftcard = (props) => {
         />
       </div>
       <div className="show-recipes">
-        {display.length > 0 ? (searchresult ): <Public />}
+        {display.length > 0 ? searchresult : <Public />}
       </div>
     </div>
   );
