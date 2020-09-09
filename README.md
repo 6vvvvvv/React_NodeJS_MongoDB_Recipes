@@ -1,4 +1,4 @@
-# React_Redux_Node_Recipes
+# React_Node_Mongo_Recipes
  
 ## Prerequisite: Make sure you change the counterpart for accessing your personal MongoDB address.
 
