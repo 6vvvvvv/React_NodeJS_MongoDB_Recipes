@@ -18,10 +18,6 @@ class Navi extends Component {
       this.setState({
         loginState: false,
       });
-<<<<<<< HEAD
-      // return this.props.history.push("/user/login");
-=======
->>>>>>> 5d8b3e5... ver16oct2020
     } else {
       var userinfo = JSON.parse(localStorage.getItem("user"));
       var token = userinfo.token;
